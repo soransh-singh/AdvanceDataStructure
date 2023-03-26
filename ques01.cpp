@@ -26,7 +26,7 @@ void store(Array &arr, int n){
     }
 } 
 */
-void store(Array &arr, int n){
+void store(Array<int> &arr, int n){
     int num;
     cout<<"Enter the elements one by one:\n";
     int oddInd=0;
@@ -50,7 +50,7 @@ int main(){
         cout<<"\t--Number Must be Even--\n";
         cin>>n;
     }while(n%2!=0);
-    Array arr(2*n);
+    Array<int> arr(2*n);
     store(arr, n);
     arr.display();
     return 0;

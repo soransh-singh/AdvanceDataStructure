@@ -5,34 +5,36 @@ using namespace std;
 
 namespace Arr{
     /* Class: Array */
+
+    template<typename T>
     class Array{
-        int *arr;
+        T *arr;
         int size, length;
         public:
         Array(int n){
-            arr = new int[n];
+            arr = new T[n];
             length = n;
             size=0;
         }
 
-        void insert(int x, int index){
+        void insert(T x, int index){
             if(size == length){
                 throw invalid_argument("Array is Full");
             }
             if(index > size){
                 throw invalid_argument("Invalid Index");
             }
-            int iter = 0;
+            // int iter = 0;
             for(int i=size; i>index; i--){
                 arr[i]= arr[i-1];
-                iter++;
+                // iter++;
             }
-            cout<<"Number of movement to input "<<x<<" is "<<iter<<endl;
+            // cout<<"Number of movement to input "<<x<<" is "<<iter<<endl;
             arr[index]= x;
             size++;
         }
 
-        int del(int index){
+        T del(int index){
             
             if(size==0){
                 throw invalid_argument("Array is Empty");
@@ -42,13 +44,13 @@ namespace Arr{
                 throw invalid_argument("Invalid Index");
             }
             
-            int iter = 0;
+            // int iter = 0;
             int val = arr[index];
             for(int i=index; i<size; i++){
                 arr[i]=arr[i+1];
-                iter++;
+                // iter++;
             }
-            cout<<"Number of iteration to delete is "<<iter<<endl;
+            // cout<<"Number of iteration to delete is "<<iter<<endl;
             size--;
             return val;
         }
@@ -57,11 +59,11 @@ namespace Arr{
             return (size==0);
         }
 
-        int get(int index){
+        T get(int index){
             return arr[index];
         }
 
-        int indexOf(int x){
+        int indexOf(T x){
             int index = -1;
             for(int i=0; i<size; i++){
                 if(arr[i] == x){
@@ -72,8 +74,12 @@ namespace Arr{
             return index;
         }
 
-        int getSize(){
+        int size(){
             return size;
+        }
+
+        int capacity(){
+            return length;
         }
 
         void display(){
@@ -83,6 +89,10 @@ namespace Arr{
             }
             cout<<"\b]";
             return;
+        }
+
+        T operator[](int index){
+            return arr[index];
         }
     };
 
