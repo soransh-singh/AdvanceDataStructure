@@ -5,8 +5,7 @@ using namespace std;
 
 namespace Mat{
     /* Class: Matrix*/
-    class Matrix
-    {
+    class Matrix{
         public:
             int rows;
             int cols;
@@ -56,7 +55,7 @@ namespace Mat{
     }
 
     Matrix Matrix::add(Matrix B){
-        if(rows != B.rows or cols != B.cols){
+        if(rows != B.rows || cols != B.cols){
             throw invalid_argument("Addition Invalid ");
         }
         Matrix C(rows, cols);
