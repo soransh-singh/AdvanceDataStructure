@@ -4,7 +4,7 @@
 using namespace std;
 
 namespace Stack{
-    /* Class Stack */ 
+    /* Class Stack */
 
     template<typename obj>
     class StackArr{
@@ -60,9 +60,5 @@ namespace Stack{
             }
         }
     };
-
-    
-
-
 
 }
