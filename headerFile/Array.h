@@ -74,7 +74,7 @@ namespace Arr{
             return index;
         }
 
-        int size(){
+        int getSize(){
             return size;
         }
 

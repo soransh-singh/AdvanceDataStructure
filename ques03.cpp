@@ -1,5 +1,5 @@
 #include<iostream>
-#include "Stack.h"
+#include ".\headerFile\Stack.h"
 
 using namespace std;
 using namespace St;

@@ -5,7 +5,7 @@
     // first odd number will be stored then even number.
 */
 #include<iostream>
-#include "Array.h"
+#include ".\headerFile\Array.h"
 
 using namespace Arr;
 using namespace std;
