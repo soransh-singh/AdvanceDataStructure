@@ -8,9 +8,9 @@ namespace SQueue{
   class StackQueue{
   private:
     obj *arr;
-    int front, rear, tos, length, n;
+    int front, rear, tos, len, n;
   public:
-    SQueue(int length){
+    StackQueue(int length){
         n=length;
         len=2*n;
         arr = new obj[len];
@@ -49,6 +49,13 @@ namespace SQueue{
         return x;
     }
 
+    void displayQueue(){
+        for(int i=front; i>=rear; i--){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
+
     /* Stack Functions */
     bool isStackEmpty(){
         return (tos==-1);
@@ -68,5 +75,13 @@ namespace SQueue{
         tos--;
         return x;
     }
+
+    void displayStack(){
+        for(int i=0; i<=tos; i++){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
+
   };
 }
