@@ -48,7 +48,7 @@ float stringToFloat(string str){
 
 int main(){
     try{
-        cout<<stringToFloat("0");
+        cout<<stringToFloat("12.3");
     }catch(exception& e){
         cerr<<"Invalid Input"<<'\n';
     }

@@ -4,15 +4,14 @@ using namespace std;
 
 
 namespace link{
+
 	class Node{   
 	public:
 		int data;
 		Node *link;
-		
 	};
 
-	class LinkedList
-	{
+	class LinkedList{
 		Node  *first;
 	public:
 		LinkedList();
@@ -81,6 +80,9 @@ namespace link{
 		}
 		return n;
 	}
+
+
+
 	
 }
 
